@@ -2,13 +2,24 @@ import StudentProgressChart from "../components/analytics/StudentProgressChart.t
 import CumulativeGpa from "../components/analytics/CumulativeGpa.tsx";
 import {MdOutlineShowChart} from "react-icons/md";
 import {FaGraduationCap} from "react-icons/fa";
+import type {User} from "../../models/User.tsx";
+
+const student: User = {
+    id: "2",
+    name: "Амир",
+    surname: "Осман",
+    studyYear: 3,
+    earnedCredits: 130,
+    major: "Софтверско Инженерство",
+    role: "student"
+};
 
 const HomePage = () => {
     return (
         <div className={"p-5 bg-gray-100"}>
             <h1 className={"text-2xl"}>Home</h1>
 
-            <h2 className={"my-5 text-3xl font-bold"}>Добредојдовте Amir Osman!</h2>
+            <h2 className={"my-5 text-3xl font-bold"}>Добредојдовте {student.name} {student.surname}!</h2>
 
             <div className={"grid grid-cols-2 gap-5 mt-3"}>
                 <div className={"justify-items-center bg-white p-5 rounded-xl shadow-md"}>
@@ -16,7 +27,7 @@ const HomePage = () => {
                         <FaGraduationCap className={"mx-2 text-4xl text-gray-700"}/>
                         <h1 className={"text-xl text-center"}>Патот до твоето дипломирање</h1>
                     </div>
-                    <StudentProgressChart completedCredits={130} studyYears={3}/>
+                    <StudentProgressChart earnedCredits={student.earnedCredits} studyYears={student.studyYear}/>
                 </div>
                 <div className={"bg-white justify-items-center p-5 rounded-xl shadow-md"}>
                     <div className={"flex justify-center items-center"}>

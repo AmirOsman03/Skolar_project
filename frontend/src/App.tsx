@@ -3,6 +3,7 @@ import Layout from "./ui/components/layout/Layout.tsx";
 import LoginPage from "./ui/pages/LoginPage.tsx";
 import CoursesPage from "./ui/pages/CoursesPage.tsx";
 import HomePage from "./ui/pages/HomePage.tsx";
+import CalendarPage from "./ui/pages/CalendarPage.tsx";
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
                 <Route path={"/"} element={<Layout/>}>
                     <Route index element={<HomePage/>}/>
                     <Route path={"/courses"} element={<CoursesPage/>}/>
+                    <Route path={"/calendar"} element={<CalendarPage/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
