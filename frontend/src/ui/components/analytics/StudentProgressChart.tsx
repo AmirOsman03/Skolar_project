@@ -2,16 +2,16 @@ import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 import React from "react";
 
 interface StudentProgressChartProps {
-    completedCredits: number;
-    studyYears: 3 | 4;
+    earnedCredits: number | null;
+    studyYears: number | null;
 }
 
-const StudentProgressChart: React.FC<StudentProgressChartProps> = ({ completedCredits, studyYears }) => {
-    const totalCredits = studyYears * 60;
-    const remainingCredits = totalCredits - completedCredits;
+const StudentProgressChart: React.FC<StudentProgressChartProps> = ({ earnedCredits, studyYears }) => {
+    const totalCredits = (studyYears ?? 0) * 60;
+    const remainingCredits = totalCredits - (earnedCredits ?? 0);
 
     const data = [
-        { name: 'Добиени кредити', value: completedCredits },
+        { name: 'Добиени кредити', value: earnedCredits ?? 0 },
         { name: 'Останати кредити', value: remainingCredits },
     ];
 
