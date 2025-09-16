@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import 'tailwindcss';
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #bfdbfe, #fecaca);
+    margin: 0;
+    font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
