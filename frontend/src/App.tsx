@@ -4,6 +4,7 @@ import LoginPage from "./ui/pages/LoginPage.tsx";
 import CoursesPage from "./ui/pages/CoursesPage.tsx";
 import HomePage from "./ui/pages/HomePage.tsx";
 import CalendarPage from "./ui/pages/CalendarPage.tsx";
+import GradesPage from "./ui/pages/GradesPage.tsx";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                     <Route index element={<HomePage/>}/>
                     <Route path={"/courses"} element={<CoursesPage/>}/>
                     <Route path={"/calendar"} element={<CalendarPage/>}/>
+                    <Route path={"/grades"} element={<GradesPage/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

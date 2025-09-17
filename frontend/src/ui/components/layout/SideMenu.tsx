@@ -15,7 +15,7 @@ const pages: Page[] = [
     { name: 'Home', path: '/', public: true, icon: <RiHomeLine />},
     { name: 'Courses', path: '/courses', public: false, icon: <IoBookOutline /> },
     { name: 'Calendar', path: '/calendar', public: false, icon: <CiCalendar />},
-    { name: 'Results', path: '/results', public: false, icon: <CiBookmarkCheck /> },
+    { name: 'Grades', path: '/grades', public: false, icon: <CiBookmarkCheck /> },
 ];
 
 interface SideMenuProps {
